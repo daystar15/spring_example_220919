@@ -30,4 +30,14 @@ public class ReviewBO {
 		return reviewDAO.insertReviewAsField(storeId, menu, userName, point, review);
 		// 자동완성 꼭 다시 확인하기(정확하지 않을 수 있음)
 	}
+	
+	// Update
+	public int updateReviewById(int id, String review) {
+		return reviewDAO.updateReviewById(id, review);
+	}
+	
+	// Delete
+	public void deleteReviewById(int id) {
+		reviewDAO.deleteReviewById(id);
+	}
 }
