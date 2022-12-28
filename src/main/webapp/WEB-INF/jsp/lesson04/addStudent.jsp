@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>${title}</title>
+<title>학생 정보 추가</title>
   <!-- bootstrap CDN link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -14,40 +14,26 @@
 </head>
 <body>
 	<div class="container">
-		<h1>${title}</h1>
-		
-		<table class="table table-striped">
-			<tr>
-				<th>번호</th>
-				<td>${seller.id}</td>
-			</tr>
-			<tr>
-				<th>이름</th>
-				<td>${seller.name}</td>
-			</tr>
-			<tr>
-				<th>생년월일</th>
-				<td>${seller.yyyymmdd}</td>
-			</tr>
-			<tr>
-				<th>이메일</th>
-				<td>${seller.email}</td>
-			</tr>
-			<tr>
-				<th>자기소개</th>
-				<td>${seller.introduce}</td>
-			</tr>
-			<!-- DB에 저장될 때는 서울시간으로 저장되어 있으나 변환이 UTC로 됨 -->
-			<!-- application.properties의 serverzonetime 때문임, 삭제해야함 -->
-			<tr>
-				<th>생성일</th>
-				<td>${seller.createdAt}</td>
-			</tr>
-			<tr>
-				<th>수정일</th>
-				<td>${seller.updatedAt}</td>
-			</tr>
-		</table>
+		<h1>학생 정보 추가</h1>
+		<form method="post" action="/lesson04/ex02/add_student">
+			<div class="form-group">
+				<label for="name">이름</label>
+				<input type="text" id="name" name="name" class="form-control col-3" placeholder="이름을 입력하세요">
+			</div>
+			<div class="form-group">
+				<label for="phoneNumber">휴대폰 번호</label>
+				<input type="text" id="phoneNumber" name="phoneNumber" class="form-control col-3" placeholder="예) 010-1111-2222">
+			</div>
+			<div class="form-group">
+				<label for="email">이메일</label>
+				<input type="text" id="email" name="email" class="form-control col-3" placeholder="이메일을 입력하세요">
+			</div>
+			<div class="form-group">
+				<label for="dreamJob">이름</label>
+				<input type="text" id="dreamJob" name="dreamJob" class="form-control col-3" placeholder="장래희망을 입력하세요">
+			</div>
+			<button type="submit" class="btn btn-success">추가</button>
+		</form>
 	</div>
 </body>
 </html>
