@@ -25,6 +25,11 @@ public class Lesson04Ex02Controller {
 			) { // 내가 만든 객체들이 파라미터가 된다(@생략가능, 여러개 받아올 때는 불가)
 		// int는 0, 날짜 객체들은 null로 들어있다.
 		// db insert - 객체 넘겨서 insert하는 것이 과제
+		student.setId(3);
+		student.setName("김남희");
+		student.setPhoneNumber("01012345678");
+		student.setEmail("asdf@asdf.com");
+		student.setDreamJob("개발자");
 		
 		// db select(방금 가입된 사람)
 		
