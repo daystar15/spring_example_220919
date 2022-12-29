@@ -29,7 +29,7 @@
 				<input type="text" id="email" name="email" class="form-control col-3" placeholder="이메일을 입력하세요">
 			</div>
 			<div class="form-group">
-				<label for="dreamJob">이름</label>
+				<label for="dreamJob">장래희망</label>
 				<input type="text" id="dreamJob" name="dreamJob" class="form-control col-3" placeholder="장래희망을 입력하세요">
 			</div>
 			<button type="submit" class="btn btn-success">추가</button>
