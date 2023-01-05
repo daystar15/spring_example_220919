@@ -40,4 +40,14 @@
 		LIMIT 1
  	</select>
  	
+ 	<!-- 0:false, 0이 아닌 수:true -->
+ 	<select id="existUserByName" parameterType="String" resultType="boolean">
+ 		SELECT
+ 			COUNT(1)
+ 		FROM
+ 			`new_user`
+ 		WHERE
+ 			`name` = #{name}
+ 	</select>
+ 	
  </mapper>
